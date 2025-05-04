@@ -1,0 +1,22 @@
+.sidebar {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1.5rem;
+  height: 100vh;
+  width: 220px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #e0f7fa;
+}

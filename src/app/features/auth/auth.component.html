@@ -1,0 +1,48 @@
+<div class="auth-container">
+  <!-- Left Side -->
+  <div class="auth-info">
+    <h1>BudgetTrack</h1>
+    <h2>Your Personal Expense Tracker</h2>
+    <p>Track your expenses, manage categories, and visualize your spending habits with our easy-to-use expense tracker.</p>
+
+    <ul>
+      <li>
+        <strong>Track Expenses</strong><br />
+        <span>Easily add and manage your daily expenses</span>
+      </li>
+      <li>
+        <strong>Visualize Spending</strong><br />
+        <span>See where your money goes with intuitive charts</span>
+      </li>
+      <li>
+        <strong>Category Management</strong><br />
+        <span>Organize expenses with customizable categories</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Right Side -->
+  <div class="auth-form card animate-up">
+    <h2>Welcome to <strong>BudgetTrack</strong></h2>
+    <p>Sign in to your account or create a new one to start tracking your expenses</p>
+
+    <div class="tab-switch">
+      <button [class.active]="isLoginMode" (click)="isLoginMode = true">Login</button>
+      <button [class.active]="!isLoginMode" (click)="isLoginMode = false">Register</button>
+    </div>
+
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <input type="email" formControlName="email" placeholder="Enter your email" required />
+
+      <label>Password</label>
+      <input type="password" formControlName="password" placeholder="Enter your password" required />
+
+      <button type="submit">{{ isLoginMode ? 'Log In' : 'Register' }}</button>
+    </form>
+
+    <p class="terms">
+      By signing up, you agree to our Terms of Service and Privacy Policy.
+    </p>
+  </div>
+</div>

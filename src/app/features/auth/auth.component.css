@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #00BCD4;
+  --primary-hover: #0097A7;
+  --light-bg: #f5fafd;
+  --text-muted: #555;
+}
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+.auth-info {
+  flex: 1;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.auth-info h2 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+.auth-info p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.auth-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.auth-info li {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+.auth-info li strong {
+  font-size: 1.1rem;
+}
+
+.auth-form {
+  flex: 1;
+  padding: 4rem 3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  margin-bottom: 0.5rem;
+}
+
+.auth-form p {
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.tab-switch {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.tab-switch button {
+  flex: 1;
+  padding: 0.8rem;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tab-switch button.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tab-switch button:not(.active):hover {
+  background-color: #e0e0e0;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-form label {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.auth-form button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+.terms {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,15 @@
+<div class="page-hero">
+  <div class="page-header">
+    <h1>Your <span class="highlight">Spending Report</span></h1>
+    <p>Visual breakdown by category</p>
+  </div>
+
+  <div class="chart-wrapper card">
+    <canvas
+      baseChart
+      [data]="pieChartData"
+      [type]="pieChartType"
+      [options]="{ responsive: true }"
+    ></canvas>
+  </div>
+</div>

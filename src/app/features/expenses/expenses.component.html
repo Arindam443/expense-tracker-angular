@@ -1,0 +1,23 @@
+<div class="page-hero">
+  <div class="page-header">
+    <h1>Add Your <span class="highlight">Expenses</span></h1>
+    <p>Track where your money goes</p>
+  </div>
+
+  <form [formGroup]="expenseForm" (ngSubmit)="onAdd()">
+    <input type="text" placeholder="Amount" formControlName="amount" required />
+    <input type="date" formControlName="date" required />
+    <select formControlName="category" required>
+      <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+    </select>
+    <button type="submit">Add Expense</button>
+  </form>
+
+  <div class="expense-list">
+    <div class="expense-item card" *ngFor="let expense of expenses">
+      <strong>{{ expense.category }}</strong> — ₹{{ expense.amount }}  
+      <br />
+      <small>{{ expense.date }}</small>
+    </div>
+  </div>
+</div>
